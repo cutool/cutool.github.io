@@ -19,7 +19,7 @@ addLoadEvent(
         const container = document.getElementById("jsoneditor")
        
         const options = {
-           mode: 'tree',
+           mode: 'code',
            modes: ['tree','preview','code']
            // ajv: Ajv({ 
            //     allErrors: true, 
