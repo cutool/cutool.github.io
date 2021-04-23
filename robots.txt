@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://cutool.online
+
+# Sitemaps
+Sitemap: https://cutool.online/sitemap.xml
