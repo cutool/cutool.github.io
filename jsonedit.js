@@ -20,7 +20,7 @@ addLoadEvent(
        
         const options = {
            mode: 'code',
-           modes: ['tree','preview','code']
+           modes: ['tree','preview','code','form'],
            // ajv: Ajv({ 
            //     allErrors: true, 
            //     verbose: true,
@@ -44,17 +44,27 @@ addLoadEvent(
         const srcOptions = {
            mode: "code",
            mainMenuBar: false,
+           popupAnchor: document.getElementById("#loading"),
            onChangeText: function(json) {
                // editor.set(editorsrc.get())
+               try{
+
               editor.set(JSON.parse(json));
            //    editor.set(json)
                editor.expandAll();
+               }catch(e){
+                //    editor.set({});
+               }
            },  ajv: Ajv({ 
                allErrors: true, 
                verbose: true,
                jsonPointers: false,
-               $data: true
-             })
+               $data: true,
+               
+             }),
+             onValidationError: function (errors) {
+                editor.set(errors)
+            }
        }
         const editorsrc = new JSONEditor(document.getElementById("json-source"), srcOptions)
         // set json
@@ -84,6 +94,11 @@ addLoadEvent(
        
        // });
        
-       
+       const loading = document.getElementById("loading")
+       loading.setAttribute("style","display:none")
+       const content = document.getElementById("content")
+    //    content.setAttribute("style","display:block")
+        // content.setAttribute("style","display:none")
+ 
        }
 )
