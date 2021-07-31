@@ -17,7 +17,9 @@ addLoadEvent(
     () => {
     
         const container = document.getElementById("jsoneditor")
-       
+      
+        const jsonEditorError = document.getElementById("jsoneditorerror")
+        
         const options = {
            mode: 'code',
            modes: ['tree','preview','code','form'],
@@ -49,10 +51,16 @@ addLoadEvent(
                // editor.set(editorsrc.get())
                try{
 
+                if (json==""){
+               jsonEditorError.setAttribute("class","dNone");
+               container.setAttribute("class","dBlock");
+                }
               editor.set(JSON.parse(json));
-           //    editor.set(json)
-               editor.expandAll();
+               jsonEditorError.setAttribute("class","dNone");
+               container.setAttribute("class","dBlock");
+                editor.expandAll();
                }catch(e){
+                   console.log(e)
                 //    editor.set({});
                }
            },  ajv: Ajv({ 
@@ -63,7 +71,22 @@ addLoadEvent(
                
              }),
              onValidationError: function (errors) {
-                editor.set(errors)
+                 try{
+                     jsonEditorError.innerHTML="";
+                     errorHtml = "";
+                     for(var i=0;i<errors.length;i++) {
+                        errorHtml = errorHtml + "<div>"
+                        errorHtml = errorHtml + errors[i].message
+                        errorHtml = errorHtml + "</div><br>"
+                     }
+                     jsonEditorError.innerHTML = errorHtml;
+                     if (errorHtml!=""){
+                        container.setAttribute("class","dNone");
+                        jsonEditorError.setAttribute("class","dBlock");
+                     }
+                 }catch(e){
+                     console.log(e)
+                 }
             }
        }
         const editorsrc = new JSONEditor(document.getElementById("json-source"), srcOptions)

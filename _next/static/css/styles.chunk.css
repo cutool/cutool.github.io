@@ -65,3 +65,17 @@ textarea {
   outline: #3883fa;
   border: thin solid #3883fa;
 }
+
+.dBlock {
+  display: block;
+}
+
+.dNone {
+  display: none;
+}
+#jsoneditorerror {
+  border: thin solid #70b0e0;
+  padding: 15px 25px;
+  color:#f1592a;
+  font-weight: bold;
+}
