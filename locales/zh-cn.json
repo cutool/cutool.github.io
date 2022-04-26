@@ -22,5 +22,6 @@
     "regex-expression":"正则表达式",
     "regex-article": "文本内容",
 
-    "sqlformatter-hit": "在此处输入sql..."
+    "sqlformatter-hit": "在此处输入sql...",
+    "jsonEditor-hit": "在此处输入 json 字符串..."
 }

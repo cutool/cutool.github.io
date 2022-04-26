@@ -1,0 +1,15 @@
+.fail {
+    color: red;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.json-key {
+    color: darkorchid;
+}
+.success {
+    padding-left: 15px;
+    /* font-size: 16px; */
+}
+textarea{
+    border: thin solid #70b0e0;
+}

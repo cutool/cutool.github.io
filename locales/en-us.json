@@ -22,5 +22,6 @@
     "regex-expression":"Expression",
     "regex-article": "Article",
 
-    "sqlformatter-hit": "type sql string here..."
+    "sqlformatter-hit": "type sql string here...",
+    "jsonEditor-hit": "type json string here..."
 }
