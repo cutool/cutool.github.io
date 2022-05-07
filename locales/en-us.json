@@ -23,5 +23,10 @@
     "regex-article": "Article",
 
     "sqlformatter-hit": "type sql string here...",
-    "jsonEditor-hit": "type json string here..."
+    "jsonEditor-hit": "type json string here...",
+    "jsonEditor-keepEscape": "Keep escape charater",
+    "jsonTool-copy":"Copy",
+    "jsonTool-zip":"Zip",
+    "jsonTool-toxml":"To XML",
+    "jsonTool-save":"Save"
 }

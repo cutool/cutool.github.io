@@ -24,4 +24,10 @@
 
     "sqlformatter-hit": "在此处输入sql...",
     "jsonEditor-hit": "在此处输入 json 字符串..."
+    ,
+    "jsonEditor-keepEscape": "保留转义符",
+    "jsonTool-copy":"复制",
+    "jsonTool-zip":"压缩",
+    "jsonTool-toxml":"转XML",
+    "jsonTool-save":"保存"
 }

@@ -13,3 +13,21 @@
 textarea{
     border: thin solid #70b0e0;
 }
+/**居中对齐**/
+.toolItem{
+    display: flex;
+    font-size: 12px;
+    height: 25px;
+    overflow: visible;
+    padding: 0.5em 0.6em 0.1em 0.6em;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #999;
+
+
+}
+
+.toolItem:hover {
+    background-color: #999;
+    color: white;
+}
